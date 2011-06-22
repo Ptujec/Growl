@@ -1,1 +1,0 @@
-This is stuff for Growl (Mac) … basically styles
