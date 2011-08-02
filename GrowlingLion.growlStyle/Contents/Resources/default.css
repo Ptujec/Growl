@@ -1,0 +1,134 @@
+ /* GrowlingLion by Andreas Heiberg */
+ /* modified by Ptujec */
+ /* 2011-08-01 
+ 	bigger fontsize 
+ 	more priorities 
+ 	some spacing fixes */
+ 
+ /* Mono by Christopher Lobay is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA. */
+
+body, html {
+	text-rendering: optimizeLegibility;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+body:hover {
+	-webkit-transition: all 0.3s ease;
+	opacity: 1 !important;
+}
+
+@-webkit-keyframes notification-wrapper {
+	0%   { opacity: 0; -webkit-transform: translate3d( 0, 0, 0 ) scale(0);}
+	33%	 { opacity: 1; -webkit-transform: translate3d( 0, 0, 0 ) scale(1);}
+	66%	 { opacity: 1; -webkit-transform: translate3d( 0, 0, 0 ) scale(1.1); }
+	100%  { opacity: 1; -webkit-transform: translate3d( 0, 0, 0 ) scale(1); }
+}
+
+.wrapper {
+	width: 300px;
+	overflow: hidden;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.notification {
+	//-webkit-animation: notification-wrapper 1.0s ease;
+	-webkit-box-sizing: border-box;
+	border-radius: 5px;
+	border: 1px solid rgba(248, 248, 248, 1);
+	background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(rgba(239,239,239,1)), to(rgba(232,232,232,1)));
+	width: 300px;
+}
+
+.border {
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0px 1px 0px rgba(255,255,255,0.4);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,0.20)), to(rgba(255,255,255,0)));
+	margin: 1px;
+	padding: 13px 9px 13px 65px;
+	-webkit-box-sizing: border-box;
+	min-height: 52px;
+	clear: both;
+	overflow: hidden;
+	position: relative;
+}
+
+.divider {
+	position: absolute;
+	top: 10px;
+	left: 1px;
+	bottom: 10px;
+	width: 54px;
+	border-right: 1px solid rgba(255,255,255,0.1);
+	-webkit-box-shadow: inset -1px 0px 0px rgba(192, 192, 192, 1);
+	-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0)), color-stop(50%, rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+}
+
+img {
+	position: absolute;
+	display: block;
+	height: 34px;
+	width: 34px;
+	top: 10px;
+	left: 10px;
+	border-radius: 3px;
+}
+
+/*
+h1,p {
+	color: #424242;
+	line-height: 14px;
+	margin: 0; padding: 0;
+	clear: both;
+	overflow: hidden;
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-weight: lighter;
+}
+
+h1 {
+	font-size: 10pt;
+	overflow: visible;
+}
+
+p {
+	font-size: 10pt;
+	color: #878888;
+	overflow: visible;
+}
+*/
+
+#title-verylow, #title-moderate, #title-normal, #title-high, #title-emergency, #text {
+	color: #424242;
+	line-height: 14px;
+	margin: 0; padding: 0;
+	clear: both;
+	overflow: hidden;
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-weight: lighter;
+}
+
+#title-verylow, #title-moderate, #title-normal {
+	font-size: 10pt;
+	overflow: visible;
+}
+
+#title-high {
+	font-size: 10pt;
+	font-weight: normal;
+	color: #2F9BEE;
+	overflow: visible;
+}
+
+#title-emergency {
+	font-size: 10pt;
+	font-weight: normal;
+	color: #FF0900;
+	overflow: visible;
+}
+
+#text {
+	font-size: 10pt;
+	color: #878888;
+	overflow: visible;
+}
